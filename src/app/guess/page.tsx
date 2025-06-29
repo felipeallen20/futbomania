@@ -1,8 +1,9 @@
 'use client'
 
+import dynamic from 'next/dynamic'
 import React, { useState } from 'react'
 import { FaDice, FaUsers } from 'react-icons/fa'
-import Roulette from '@/components/guess/Roulette'
+const Roulette = dynamic(() => import('@/components/guess/Roulette'), { ssr: false })
 import RouletteItemManager from '@/components/guess/RouletteItemManager'
 import TeamModal from '@/components/team-selector/TeamModal'
 
